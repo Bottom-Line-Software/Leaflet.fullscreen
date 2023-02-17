@@ -73,7 +73,7 @@
                 if (options && options.pseudoFullscreen) {
                     this._enablePseudoFullscreen(container);
                 } else if (container.requestFullscreen) {
-                    container.requestFullscreen();
+                    container.requestFullscreen().then(function() { console.log('ENter fullscreen mode') });
                 } else if (container.mozRequestFullScreen) {
                     container.mozRequestFullScreen();
                 } else if (container.webkitRequestFullscreen) {
